@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energi Tak Terbarukan - Website Edukatif</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation & Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-bolt"></i> Energi Tak Terbarukan
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Beranda</a>
+                    <a href="#pengertian">Pengertian</a>
+                    <a href="#jenis">Jenis</a>
+                    <a href="#dampak">Dampak</a>
+                    <a href="#quiz">Quiz</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Landing Section -->
+        <section class="landing" id="home">
+            <div class="landing-content">
+                <h1 class="main-title">ENERGI TAK TERBARUKAN</h1>
+                <p class="subtitle">Pahami sumber energi fosil dan dampaknya bagi masa depan kita</p>
+                <div class="landing-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('#pengertian')">Pelajari Sekarang</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('#dampak')">Lihat Dampak</button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll untuk melanjutkan</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+    </header>
+
+    <!-- Pengertian Section -->
+    <section class="section" id="pengertian">
+        <div class="container">
+            <h2 class="section-title">Pengertian Energi Tak Terbarukan</h2>
+            <div class="pengertian-content">
+                <div class="pengertian-text">
+                    <p>Energi tak terbarukan adalah energi yang proses pembentukannya membutuhkan waktu lebih lama. Keberadaan energi ini sangat terbatas. Oleh karena itu, manusia harus lebih bijak dalam memanfaatkannya.</p>
+                    <p class="highlight">Dengan meningkatnya penggunaan energi fosil, persediaannya semakin menipis dan dampaknya terhadap lingkungan semakin besar.</p>
+                </div>
+                <div class="pengertian-cards">
+                    <div class="info-card hover-expand">
+                        <div class="card-icon">
+                            <i class="fas fa-hourglass-end"></i>
+                        </div>
+                        <h3>Terbatas</h3>
+                        <p>Jumlahnya terbatas dan terus berkurang</p>
+                    </div>
+                    <div class="info-card hover-expand">
+                        <div class="card-icon">
+                            <i class="fas fa-cloud-exclamation"></i>
+                        </div>
+                        <h3>Polusi</h3>
+                        <p>Menghasilkan emisi yang merusak lingkungan</p>
+                    </div>
+                    <div class="info-card hover-expand">
+                        <div class="card-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Perubahan Iklim</h3>
+                        <p>Berkontribusi pada pemanasan global</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jenis-Jenis Energi Section -->
+    <section class="section alt-bg" id="jenis">
+        <div class="container">
+            <h2 class="section-title">Jenis-Jenis Energi Tak Terbarukan</h2>
+            <div class="energy-cards">
+                <!-- Minyak Bumi -->
+                <div class="energy-card" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <i class="fas fa-droplet"></i>
+                        <h3>Minyak Bumi</h3>
+                    </div>
+                    <p class="card-description">Sumber energi utama dunia</p>
+                    <div class="card-details hidden">
+                        <p><strong>Penggunaan:</strong> Bahan bakar kendaraan, pembangkit listrik, bahan kimia</p>
+                        <p><strong>Terbentuk:</strong> Dari sisa makhluk hidup yang tertimbun ribuan tahun</p>
+                        <p><strong>Dampak:</strong> Emisi CO₂ tinggi, risiko tumpahan minyak</p>
+                    </div>
+                    <div class="toggle-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <!-- Batu Bara -->
+                <div class="energy-card" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <i class="fas fa-mountain"></i>
+                        <h3>Batu Bara</h3>
+                    </div>
+                    <p class="card-description">Sumber energi paling berlimpah</p>
+                    <div class="card-details hidden">
+                        <p><strong>Penggunaan:</strong> Pembangkit listrik, industri logam</p>
+                        <p><strong>Terbentuk:</strong> Dari hutan purba yang mengalami tekanan tinggi</p>
+                        <p><strong>Dampak:</strong> Polusi udara terburuk, emisi CO₂ tertinggi</p>
+                    </div>
+                    <div class="toggle-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <!-- Gas Alam -->
+                <div class="energy-card" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <i class="fas fa-wind"></i>
+                        <h3>Gas Alam</h3>
+                    </div>
+                    <p class="card-description">Energi fosil paling bersih</p>
+                    <div class="card-details hidden">
+                        <p><strong>Penggunaan:</strong> Pemanas, pembangkit listrik, bahan bakar industri</p>
+                        <p><strong>Terbentuk:</strong> Bersama minyak bumi di dalam bumi</p>
+                        <p><strong>Dampak:</strong> Emisi lebih rendah dari batu bara, tapi tetap berbahaya</p>
+                    </div>
+                    <div class="toggle-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <!-- Energi Nuklir -->
+                <div class="energy-card" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <i class="fas fa-atom"></i>
+                        <h3>Energi Nuklir</h3>
+                    </div>
+                    <p class="card-description">Energi dari reaksi inti atom</p>
+                    <div class="card-details hidden">
+                        <p><strong>Penggunaan:</strong> Pembangkit listrik, penelitian medis</p>
+                        <p><strong>Terbentuk:</strong> Dari reaksi fisi uranium dan plutonium</p>
+                        <p><strong>Dampak:</strong> Tidak ada emisi CO₂, tapi limbah radioaktif berbahaya</p>
+                    </div>
+                    <div class="toggle-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proses Pembentukan Section -->
+    <section class="section" id="pembentukan">
+        <div class="container">
+            <h2 class="section-title">Proses Pembentukan Energi Fosil</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Jutaan Tahun Lalu</h3>
+                        <p>Makhluk hidup (tumbuhan dan hewan) hidup dan berkembang biak.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Pengendapan</h3>
+                        <p>Saat makhluk hidup mati, mereka tertimbun di dasar laut atau danau.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Pemadatan</h3>
+                        <p>Lapisan sedimen terus menumpuk dan memberikan tekanan besar.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3>Transformasi Kimia</h3>
+                        <p>Dengan panas dan tekanan, bahan organik berubah menjadi fosil.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <h3>Terbentuk Energi Fosil</h3>
+                        <p>Proses selesai setelah jutaan tahun. Energi fosil siap digunakan manusia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dampak Lingkungan Section -->
+    <section class="section alt-bg" id="dampak">
+        <div class="container">
+            <h2 class="section-title">Dampak Lingkungan</h2>
+            <div class="impact-grid">
+                <div class="impact-card impact-high">
+                    <div class="impact-icon">
+                        <i class="fas fa-smog"></i>
+                    </div>
+                    <h3>Polusi Udara</h3>
+                    <p class="impact-level">Dampak: <strong>SANGAT TINGGI</strong></p>
+                    <div class="impact-detail">
+                        <p>Pembakaran bahan bakar fosil menghasilkan partikel berbahaya yang mencemari udara dan merusak kesehatan pernafasan.</p>
+                    </div>
+                </div>
+
+                <div class="impact-card impact-high">
+                    <div class="impact-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Pemanasan Global</h3>
+                    <p class="impact-level">Dampak: <strong>SANGAT TINGGI</strong></p>
+                    <div class="impact-detail">
+                        <p>Gas CO₂ yang dihasilkan mengumpul di atmosfer dan menangkap panas matahari, menyebabkan suhu bumi meningkat.</p>
+                    </div>
+                </div>
+
+                <div class="impact-card impact-medium">
+                    <div class="impact-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Kerusakan Air</h3>
+                    <p class="impact-level">Dampak: <strong>TINGGI</strong></p>
+                    <div class="impact-detail">
+                        <p>Limbah minyak dan bahan kimia mencemari sumber air, membunuh kehidupan laut dan merusak ekosistem.</p>
+                    </div>
+                </div>
+
+                <div class="impact-card impact-high">
+                    <div class="impact-icon">
+                        <i class="fas fa-flask-vial"></i>
+                    </div>
+                    <h3>Limbah Radioaktif</h3>
+                    <p class="impact-level">Dampak: <strong>SANGAT TINGGI</strong></p>
+                    <div class="impact-detail">
+                        <p>Limbah nuklir radioaktif tetap berbahaya selama ribuan tahun dan sangat sulit untuk dibuang dengan aman.</p>
+                    </div>
+                </div>
+
+                <div class="impact-card impact-medium">
+                    <div class="impact-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Kerusakan Hutan</h3>
+                    <p class="impact-level">Dampak: <strong>TINGGI</strong></p>
+                    <div class="impact-detail">
+                        <p>Pertambangan bahan bakar fosil menghancurkan hutan dan habitat alami, mengakibatkan kepunahan spesies.</p>
+                    </div>
+                </div>
+
+                <div class="impact-card impact-medium">
+                    <div class="impact-icon">
+                        <i class="fas fa-person-hiking"></i>
+                    </div>
+                    <h3>Kesehatan Manusia</h3>
+                    <p class="impact-level">Dampak: <strong>TINGGI</strong></p>
+                    <div class="impact-detail">
+                        <p>Polusi dan perubahan iklim menyebabkan penyakit pernapasan, alergi, dan berbagai masalah kesehatan lainnya.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulasi Interaktif Section -->
+    <section class="section" id="simulasi">
+        <div class="container">
+            <h2 class="section-title">Simulasi Interaktif</h2>
+            <div class="simulation-container">
+                <div class="simulation-content">
+                    <h3>Simulasi: Dampak Penggunaan Energi Fosil</h3>
+                    <p>Geser slider untuk melihat dampak penggunaan energi fosil selama periode waktu tertentu.</p>
+                    
+                    <div class="slider-group">
+                        <label for="yearSlider">Tahun penggunaan: <span id="yearValue">10</span> tahun</label>
+                        <input type="range" id="yearSlider" min="1" max="50" value="10" class="slider">
+                    </div>
+
+                    <div class="simulation-results">
+                        <div class="result-item">
+                            <h4>Emisi CO₂</h4>
+                            <div class="result-value" id="co2Result">500</div>
+                            <div class="result-unit">juta ton</div>
+                            <div class="result-bar">
+                                <div class="result-bar-fill" id="co2Bar" style="width: 10%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="result-item">
+                            <h4>Peningkatan Suhu</h4>
+                            <div class="result-value" id="tempResult">0.2°C</div>
+                            <div class="result-unit">per tahun</div>
+                            <div class="result-bar">
+                                <div class="result-bar-fill temp" id="tempBar" style="width: 10%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="result-item">
+                            <h4>Lahan Rusak</h4>
+                            <div class="result-value" id="landResult">10</div>
+                            <div class="result-unit">ribu hektar</div>
+                            <div class="result-bar">
+                                <div class="result-bar-fill damage" id="landBar" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="simulation-message" id="simMessage">
+                        Simulasi dimulai. Geser slider untuk melihat dampak yang meningkat.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perbandingan Energi Section -->
+    <section class="section alt-bg" id="perbandingan">
+        <div class="container">
+            <h2 class="section-title">Perbandingan Energi Tak Terbarukan vs Terbarukan</h2>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspek</th>
+                            <th class="highlight-col">Energi Tak Terbarukan</th>
+                            <th class="highlight-col alt">Energi Terbarukan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ketersediaan</strong></td>
+                            <td>Terbatas & terus berkurang</td>
+                            <td>Tidak terbatas (matahari, angin, air)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Emisi CO₂</strong></td>
+                            <td><span class="badge danger">Sangat Tinggi</span></td>
+                            <td><span class="badge success">Sangat Rendah</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dampak Lingkungan</strong></td>
+                            <td>Merusak ekosistem & polusi</td>
+                            <td>Ramah lingkungan</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Efisiensi</strong></td>
+                            <td>Tinggi tapi tidak berkelanjutan</td>
+                            <td>Terus berkembang & efisien</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Biaya Jangka Panjang</strong></td>
+                            <td>Mahal (dampak lingkungan)</td>
+                            <td>Murah & stabil</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Masa Depan</strong></td>
+                            <td>Tidak berkelanjutan</td>
+                            <td>Solusi masa depan</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="section" id="quiz">
+        <div class="container">
+            <h2 class="section-title">Quiz Interaktif</h2>
+            <div class="quiz-container">
+                <div id="quizContent"></div>
+                <div id="quizResults" class="hidden">
+                    <h3>Hasil Quiz Anda</h3>
+                    <div class="score-display">
+                        <div class="score-circle">
+                            <span class="score-text" id="scoreText">0/5</span>
+                        </div>
+                        <p id="scorePercentage">0%</p>
+                    </div>
+                    <div id="resultMessage" class="result-message"></div>
+                    <button class="btn btn-primary" onclick="restartQuiz()">Ulangi Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="section alt-bg conclusion">
+        <div class="container">
+            <h2 class="section-title">Kesimpulan</h2>
+            <div class="conclusion-content">
+                <div class="conclusion-text">
+                    <h3>Ringkasan Materi</h3>
+                    <ul class="conclusion-list">
+                        <li>Energi tak terbarukan berasal dari fosil yang terbentuk jutaan tahun lalu</li>
+                        <li>Meliputi minyak bumi, batu bara, gas alam, dan energi nuklir</li>
+                        <li>Jumlahnya terbatas dan terus berkurang seiring penggunaan</li>
+                        <li>Menyebabkan polusi udara, pemanasan global, dan kerusakan lingkungan</li>
+                        <li>Tidak berkelanjutan untuk masa depan yang lebih baik</li>
+                    </ul>
+
+                    <div class="cta-message">
+                        <h3>💚 Pesan Kesadaran</h3>
+                        <p class="big-quote">"Gunakan energi secara bijak untuk masa depan yang berkelanjutan"</p>
+                        <p>Kita perlu beralih ke energi terbarukan seperti matahari, angin, dan air untuk melindungi bumi kita.</p>
+                    </div>
+
+                    <div class="action-items">
+                        <h4>Langkah Nyata untuk Berkontribusi:</h4>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Hemat listrik di rumah</span>
+                            </div>
+                            <div class="action-item">
+                                <i class="fas fa-leaf"></i>
+                                <span>Gunakan transportasi ramah lingkungan</span>
+                            </div>
+                            <div class="action-item">
+                                <i class="fas fa-recycle"></i>
+                                <span>Mendaur ulang sampah</span>
+                            </div>
+                            <div class="action-item">
+                                <i class="fas fa-tree"></i>
+                                <span>Menanam pohon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Website Edukatif - Energi Tak Terbarukan</p>
+            <p>Dibuat untuk tujuan pendidikan SMP/SMA/SMK</p>
+            <div class="footer-icons">
+                <i class="fas fa-heart"></i> Untuk masa depan bumi yang lebih baik
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
